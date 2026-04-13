@@ -1,16 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-} 
- 
- .logotext {
-     font-weight: bolder;
-     font-size: 18px;
- }
-
- nav{
-    padding: 12px 5px;
-     display: flex;
-     align-items: center;
-     background-color:  black;
-     color: white
+div{
+    color: blueviolet;
+}
