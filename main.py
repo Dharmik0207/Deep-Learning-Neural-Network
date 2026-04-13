@@ -1,12 +1,18 @@
-def step(x):
-    return 1 if x >= 0 else 0
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World Kirti!</p>"
+
+@app.route("/about")
+def about():
+    return render_template("index.html")
+
+@app.route("/contact")
+def contact():
+    return "<p>Hello, I am contact page!</p>"
 
 
-def perceptron(x1, x2, w1, w2, b):
-    y = x1*w1 + x2*w2 + b
-    return step(y)
-
-print(perceptron(0, 0, 1, 1, -1.5))
-print(perceptron(0, 1, 1, 1, -1.5))
-print(perceptron(1, 0, 1, 1, -1.5))
-print(perceptron(1, 1, 1, 1, -1.5))
+app.run(debug=True)
